@@ -1,0 +1,70 @@
+import slick.driver.SQLiteDriver.api._
+import shapeless.{::, HNil}
+import slickless._
+
+object DataHolder2 {
+  lazy val tradeConfirmationTable = TableQuery[TradeConfirmationTable]
+
+  class TradeConfirmationTable(tag: Tag) extends Table[String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: String :: HNil](tag, "trade.confirmation") {
+    def accountId = column[String]("accountId")
+    def acctAlias = column[String]("acctAlias")
+    def symbol = column[String]("symbol")
+    def description = column[String]("description")
+    def assetCategory = column[String]("assetCategory")
+    def multiplier = column[String]("multiplier")
+    def currency = column[String]("currency")
+    def tradeDate = column[String]("tradeDate")
+    def dateTime = column[String]("dateTime")
+    def orderType = column[String]("orderType")
+    def buySell = column[String]("buySell")
+    def quantity = column[String]("quantity")
+    def price = column[String]("price")
+    def amount = column[String]("amount")
+    def commission = column[String]("commission")
+    def exchange = column[String]("exchange")
+    def model = column[String]("model")
+    def conid = column[String]("conid")
+    def securityID = column[String]("securityID")
+    def securityIDType = column[String]("securityIDType")
+    def cusip = column[String]("cusip")
+    def isin = column[String]("isin")
+    def underlyingConid = column[String]("underlyingConid")
+    def underlyingSymbol = column[String]("underlyingSymbol")
+    def issuer = column[String]("issuer")
+    def strike = column[String]("strike")
+    def expiry = column[String]("expiry")
+    def putCall = column[String]("putCall")
+    def transactionType = column[String]("transactionType")
+    def tradeID = column[String]("tradeID")
+    def orderID = column[String]("orderID")
+    def execID = column[String]("execID")
+    def brokerageOrderID = column[String]("brokerageOrderID")
+    def orderReference = column[String]("orderReference")
+    def volatilityOrderLink = column[String]("volatilityOrderLink")
+    def clearingFirmID = column[String]("clearingFirmID")
+    def origTradePrice = column[String]("origTradePrice")
+    def origTradeDate = column[String]("origTradeDate")
+    def origTradeID = column[String]("origTradeID")
+    def orderTime = column[String]("orderTime")
+    def reportDate = column[String]("reportDate")
+    def settleDate = column[String]("settleDate")
+    def proceeds = column[String]("proceeds")
+    def brokerExecutionCommission = column[String]("brokerExecutionCommission")
+    def brokerClearingCommission = column[String]("brokerClearingCommission")
+    def thirdPartyExecutionCommission = column[String]("thirdPartyExecutionCommission")
+    def thirdPartyClearingCommission = column[String]("thirdPartyClearingCommission")
+    def thirdPartyRegulatoryCommission = column[String]("thirdPartyRegulatoryCommission")
+    def otherCommission = column[String]("otherCommission")
+    def commissionCurrency = column[String]("commissionCurrency")
+    def tax = column[String]("tax")
+    def code = column[String]("code")
+    def levelOfDetail = column[String]("levelOfDetail")
+    def traderID = column[String]("traderID")
+    def isAPIOrder = column[String]("isAPIOrder")
+    def allocatedTo = column[String]("allocatedTo")
+
+    def * = accountId :: acctAlias :: symbol :: description :: assetCategory :: multiplier :: currency :: tradeDate :: dateTime :: orderType :: buySell :: quantity :: price :: amount :: commission :: exchange :: model :: conid :: securityID :: securityIDType :: cusip :: isin :: underlyingConid :: underlyingSymbol :: issuer :: strike :: expiry :: putCall :: transactionType :: tradeID :: orderID :: execID :: brokerageOrderID :: orderReference :: volatilityOrderLink :: clearingFirmID :: origTradePrice :: origTradeDate :: origTradeID :: orderTime :: reportDate :: settleDate :: proceeds :: brokerExecutionCommission :: brokerClearingCommission :: thirdPartyExecutionCommission :: thirdPartyClearingCommission :: thirdPartyRegulatoryCommission :: otherCommission :: commissionCurrency :: tax :: code :: levelOfDetail :: traderID :: isAPIOrder :: allocatedTo :: HNil
+
+    val pk = primaryKey("trade.confirmation_pkey", accountId :: orderID :: execID :: HNil)
+  }
+}
