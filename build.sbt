@@ -8,6 +8,3 @@ libraryDependencies ++= Seq(
   "io.underscore"      %% "slickless" % "0.1.1"
 )
 
-javaOptions ++= Seq(
-  "-Xss4m"
-)
